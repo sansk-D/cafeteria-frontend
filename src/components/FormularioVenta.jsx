@@ -13,11 +13,11 @@ function FormularioVenta() {
 
   // Cargar listas de estudiantes y productos al iniciar
   useEffect(() => {
-    axios.get('http://localhost:3000/estudiantes')
+    api.get('http://localhost:3000/estudiantes')
       .then(res => setEstudiantes(res.data))
       .catch(err => console.error(err));
 
-    axios.get('http://localhost:3000/productos')
+    api.get('http://localhost:3000/productos')
       .then(res => setProductos(res.data))
       .catch(err => console.error(err));
   }, []);
