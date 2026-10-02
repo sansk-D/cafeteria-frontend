@@ -31,7 +31,7 @@ function FormularioVenta() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3000/ventas', formData)
+    api.post('/ventas', formData)
       .then(res => {
         alert(res.data.message);
         setFormData({ estudiante_id: '', producto_id: '', cantidad: '', fecha: '' });

@@ -31,7 +31,7 @@ function EditarVenta({ venta, onUpdate }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:3000/ventas/${venta.id}`, formData)
+   api.post('/ventas', formData)
       .then(res => {
         alert(res.data.message);
         onUpdate(); // refresca la lista de ventas
