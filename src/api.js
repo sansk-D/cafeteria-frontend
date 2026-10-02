@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-// Toma la variable de entorno en Vercel o usa localhost en desarrollo
-const API_URL = import.meta.env.VITE_API_URL || '';
-
 export const api = axios.create({
-  baseURL: API_URL
+  baseURL: 'https://cafeteria-backend-pbzm.onrender.com' 
+  // ¡Pon aquí el enlace exacto de tu backend en Render sin barra al final!
 });
